@@ -10,7 +10,9 @@ function SignIn() {
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
-      <Button onClick={signInWithGoogle}>Sign In With Google </Button>
+      <button onClick={signInWithGoogle} className="btn btn-primary my-5">
+        Sign In With Google{" "}
+      </button>
     </div>
   );
 }

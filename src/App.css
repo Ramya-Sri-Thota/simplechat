@@ -1,0 +1,39 @@
+.chatbox-page .chatbox-aside {
+  height: 300px;
+  overflow-y: scroll;
+  padding: 15px;
+}
+
+.chatbox-page .user-img {
+  max-width: 70px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.chatbox-page .chats-sec .msg {
+  margin-bottom: 15px;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 10px;
+}
+
+.border1 {
+  border: 1px solid black;
+}
+
+.chatbox-page .signout-btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.chatbox-page .sendbox-sec {
+  padding: 10px;
+}
+
+.msg.sent {
+  width: 50%;
+}
+.msg.recieved {
+  width: 50%;
+  margin-left: auto;
+}

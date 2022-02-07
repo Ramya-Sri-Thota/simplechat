@@ -20,27 +20,37 @@ function Chat() {
     };
   }, []);
   return (
-    <div>
-      <SignOut />
-      <div className="msgs">
-        {console.log(messages)}
-        {messages.map(({ id, text, photoURL, uid }) => {
-          return (
-            <div>
-              <div
-                key={id}
-                className={`msg ${
-                  uid === auth.currentUser ? "sent" : "recieved"
-                }`}
-              >
-                <img src={photoURL} alt="" />
-                <p>{text}</p>
-              </div>
+    <div className="chatbox-page">
+      <div className="container">
+        <SignOut />
+        <div className="row">
+          <div className="col-sm-6 ">
+            <SendMessages />
+          </div>
+          <div className="col-sm-6 ">
+            <div className="chatbox-aside border1">
+              {messages.map(({ id, text, photoURL, uid }) => {
+                return (
+                  <div className="chats-sec">
+                    <div
+                      key={id}
+                      className={`msg  d-flex ${
+                        uid === auth.currentUser.uid ? "sent" : "recieved"
+                      }`}
+                    >
+                      {console.log("sent person", auth.currentUser.uid)}
+                      {console.log("uid", uid)}
+
+                      <img src={photoURL} alt="" className="user-img" />
+                      <p>{text}</p>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
-          );
-        })}
+          </div>
+        </div>
       </div>
-      <SendMessages />
     </div>
   );
 }
